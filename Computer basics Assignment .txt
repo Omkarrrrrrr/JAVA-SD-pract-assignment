@@ -1,0 +1,32 @@
+Computer basics Assignment 
+
+1)What is computer?
+- A computer is an electronic device that stores and processes data, often in
+binary form, in accordance with commands from a variable programme.
+
+2)What is RAM?
+-RAM stands for Random Access Memory. It is a type of computer memory that is used to store data and machine code that is currently being used or processed by the CPU. RAM is volatile, meaning that it loses its contents when the power is turned off. RAM is used by the CPU to store data that needs to be accessed quickly, such as running programs and open files.
+
+3)Where is data stored in a computer?
+-In a computer, data is stored in various types of storage devices.
+-The primary storage device is the Random Access Memory (RAM), which temporarily holds data that is actively being used or processed by the CPU.
+-for long-term storage, data is typically stored on secondary storage devices such as hard disk drives (HDDs), solid-state drives (SSDs), or other types of storage media. These devices provide non-volatile storage, meaning that data is retained even when the power is turned off.
+
+4)What is that input device used to type text and numbers on a document in the computer system?
+- keyboard
+
+5)What are the output devices?
+- 
+Output devices are used to present data from a computer to the user.
+monitor,printer,plotter,speakers.
+
+
+6)Which is thw input device that allows a user to move cursor on pointer on the screen?
+-mouse
+
+7)Which language is directly understood by the computer without a transition program?
+- machine language that is consist of binary code.
+
+8)what are input devices?
+- Input devices are peripherals or tools used to provide data and control signals to a computer or other electronic device. These devices allow users to interact with the computer and input data or commands
+keyboard,mouse,webcam,joystick,etc.
