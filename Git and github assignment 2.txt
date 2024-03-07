@@ -1,0 +1,40 @@
+1) how to check if git is available on your system?
+- we can open a terminal or command prompt and enter the command: git --version
+
+2)how to initialize a new git repository?
+- Open a Terminal or Command Prompt
+- Navigate to the Directory Where You Want to Create the Repository by using 'cd' command as          mentioned bwlow:
+     cd path/to/your/directory
+-Initialize the Git Repository by using following command:
+    git init
+
+3)how to tell git about your name and email?
+- by using following commands:
+ git config --global user.name "Your Name"
+ git config --global user.email "your.email@example.com"
+
+4)how to add a file to staging area?
+- use this command first:
+  git add <filename>
+- check status , does the file added or not:
+  git status
+
+5) how to remove a file from staging area?
+  -  To remove a specific file from the staging area, use the 'git reset' command
+
+6)how to make a commit?
+- Use the 'git commit' command to create a commit:
+ git commit -m "My commit message"
+
+7) how to send your changes to remote repository?
+- Use the git push command to send your changes to the remote repository:
+  git push <remote_name> <branch_name>
+ex . git push origin main
+
+8) what is difference between clone and pull?
+- clone: 
+Cloning is typically done when you want to copy an entire repository, including all branches and commit history, from a remote server (like GitHub, GitLab, or Bitbucket) to your local machine. This is commonly used when starting a new project or when you want to contribute to an existing project.
+- pull:
+Pulling is used to update your local repository with changes made by others. It fetches the changes from the specified remote repository and branch and automatically merges them into your current local branch. This is commonly done to keep your local branch up-to-date with the latest changes made by collaborators.
+
+ 
