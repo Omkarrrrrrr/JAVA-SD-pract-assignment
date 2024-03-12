@@ -1,0 +1,48 @@
+Fundamentals of java Assignment 1
+
+
+1) what is programmig language?
+- Programming language is set of instructions that instruct a computer how to carry out a task.
+-Category of Programming Languages:
+
+● Machine Level Language
+● Assembly language
+● High-level languages
+
+2)Why do we need a programming language?
+- programming languages are crucial for enabling effective communication between humans and computers, facilitating problem-solving, automating tasks, driving innovation, and supporting the development of a wide range of software applications.That's why we need a programming language.
+
+3) what are the features of java?
+- ● Simple
+● Object-Oriented
+● Portable
+● Platform independent
+● Robust
+● Distributed
+● Dynamic
+
+4) what is an object ?
+- An object is an entity with state and behaviour.
+-object is an instance of a class
+-object is used to model real-world entities by encapsulating their properties (attributes) and behaviors (methods) into a single unit. 
+
+5) what is class?
+- A class is a collection of objects that have similar traits, behaviours, and attributes.
+-  A class is a blueprint or a template that defines the structure and behavior of objects. It contains data members (fields) and methods.
+
+6) Explain about the main() method in Java?
+-In Java, the main method is a special method that serves as the entry point for a Java application. When you run a Java program, the Java Virtual Machine (JVM) looks for the main method to start the execution of the program. The main method must have a specific signature.
+●syntax:
+              public class MyClass {
+    public static void main(String[] args) {
+        // The code inside this method is executed when the program starts.
+    }
+}
+
+- public and static: These are access modifiers indicating that the main method is accessible from outside the class (public) and can be called without creating an instance of the class (static).
+
+void: This keyword indicates that the main method does not return any value.
+
+main: This is the name of the method. It is the conventional entry point for Java applications.
+
+String[] args: This is the parameter of the main method, where args stands for arguments. It allows you to pass command-line arguments to your Java program. The String[] array holds the command-line arguments as strings
