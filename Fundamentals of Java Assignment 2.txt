@@ -1,0 +1,76 @@
+Fundamentals of Java Assignment 2
+
+1) what  is statically typed vs dynamically typed programming language?
+- Statically typed: Programming languages are referred to as "Static typed" if the
+memory of the variable is provided at the time of compilation.
+For instance, C, C++, and Java
+
+-Dynamically typed: Programming languages are said to as "dynamically typed"
+if the memory for the variable is provided at the time of execution.
+Like Python, PHP, and JavaScript
+
+2)What is the variable in java?
+- ● A variable is the name of a memory-allocated reserved area. It may be thought of as
+the name of a memory location, in other words.
+
+● While the Java programme is running, the value is held in a container.
+
+● To identify the storage location, each variable needs to have a special name.
+
+● A data type is assigned to a variable 
+
+3)How to assign a value in variable ?
+- value can be assigned to a variable using Assignment operator.
+- ex . int myNumber = 42;
+- here assignment operator is used to  store the value 42 in 'myNumber' variable which is of integer data type.
+
+4) What are premitive data types un java?
+- A primitive type is predefined by the language and is named by a reserved keyword.
+- Primitive data types: The primitive data types include boolean, char, byte,
+short, int, long, float and double.
+
+5)What are identifiers in java?
+- An identifier is a name given to a package, class, interface, method, or variable. All identifiers must have different names.
+
+6)List the operators in java?
+- Java supports a variety of operators that can be classified into several categories. Here is a list of operators in Java:
+1. Arithmetic Operators
+2. Relational Operators
+3. Logical Operators
+4. Assignment Operators
+5. Unary Operators
+6. Bitwise Operators
+
+7) Explain about increment and decrement operators and give an example 
+- Increment and decrement operators are used to increase or decrease the value of a variable by 1, respectively. These operators are often denoted as ++ (increment) and -- (decrement).
+
+● Increment Operator (++):
+The increment operator increases the value of a variable by 1. It can be used as a prefix (++i) or a postfix (i++) operator.
+
+ex :
+int i = 5;
+++i; // Increment i by 1
+System.out.println("After increment: " + i); // Output: 6
+
+// Or using the postfix increment
+int j = 10;
+j++; // Increment j by 1
+System.out.println("After increment: " + j); // Output: 11
+
+
+● Decrement Operator (--):
+The decrement operator decreases the value of a variable by 1. Like the increment operator, it can be used as a prefix (--i) or a postfix (i--) operator.
+
+ex:
+int x = 8;
+--x; // Decrement x by 1
+System.out.println("After decrement: " + x); // Output: 7
+
+// Or using the postfix decrement
+int y = 15;
+y--; // Decrement y by 1
+System.out.println("After decrement: " + y); // Output: 14
+
+
+
+
