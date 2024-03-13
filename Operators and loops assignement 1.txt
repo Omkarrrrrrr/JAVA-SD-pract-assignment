@@ -1,0 +1,125 @@
+Operators and loops assignement 1
+
+
+1) What are conditional operators in java?
+- When a condition consists of multiple boolean expressions, they are used. Use
+conditional operators to combine two expressions, such as when we wish to print
+a number only if it is larger than 2 and less than 5, respectively.
+
+We have 3 types of conditional operators -
+● Logical-and Operator(&&)
+● Logical-or Operator(||)
+● Ternary operator(?:)
+
+2) what are the types of operators based on no. of operands?
+- There are three types of operators based on no of operands in java:
+1)Unary operator
+2)binary operator
+3)ternery operator
+
+Unary Operators:
+
+●Unary operators act upon a single operand.
+Example: ++ (increment), -- (decrement), + (unary plus), - (unary minus), ! (logical complement), etc.
+Binary Operators:
+
+●Binary operators act upon two operands.
+Examples: + (addition), - (subtraction), * (multiplication), / (division), % (modulus), == (equality), != (inequality), < (less than), > (greater than), <= (less than or equal to), >= (greater than or equal to), && (logical AND), || (logical OR), etc.
+Ternary Operator:
+
+●Ternary operator acts upon three operands.
+Syntax: condition ? expression1 : expression2
+If the condition evaluates to true, the value of expression1 is returned; otherwise, the value of expression2 is returned
+
+
+3)What is use of switch case in java programming?
+- switch statement is a control flow statement that allows you to select one of many code blocks to be executed based on the value of a variable or an expression. It provides a more efficient way to handle multiple branching conditions compared to using multiple if-else statements.
+
+4) What are the priority levels of arithmetic operation in java?
+-  precedence of arithmetic operators in Java, from highest to lowest:
+
+Postfix operators:
+
+++ (post-increment)
+-- (post-decrement)
+Prefix operators:
+
+++ (pre-increment)
+-- (pre-decrement)
++ (unary plus)
+- (unary minus)
+! (logical complement)
+~ (bitwise complement)
+Multiplicative operators:
+
+* (multiplication)
+/ (division)
+% (modulus)
+Additive operators:
+
++ (addition)
+- (subtraction)
+
+
+5) what are the conditional statements and use of conditional statements in java?
+-Conditional statements in Java allow you to control the flow of your program based on certain conditions. These statements help you execute specific blocks of code only if certain conditions are met.
+-Conditional statements are fundamental in programming and are extensively used for decision-making in Java programs. They help in controlling the flow of execution based on various conditions, enabling you to write more dynamic and responsive programs.
+-Java has the following conditional statements:
+● If statement
+● else statement
+● If-else Ternary
+● Nested if-else
+● Switch statement
+
+
+6) what is syntax of if else statemnets?
+- Syntax: 
+if (condition) {
+    // block of code to be executed if the condition is true
+} else {
+    // block of code to be executed if the condition is false
+}
+
+7)What are three types of iterative statements in java?
+- 1) for loop
+2) while loop
+3)do-while loop
+
+
+8) write the difference between for loop an do-while loop
+- ● For Loop:
+
+In a for loop, the loop condition is evaluated before each iteration.
+It consists of an initialization expression, a condition, and an iteration statement.
+The loop condition is checked before executing the loop body. If the condition evaluates to false initially, the loop body will not be executed at all.
+
+ex:
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+- ● Do-While loop:
+In a do-while loop, the loop condition is evaluated after each iteration.
+It consists of a loop body followed by the do-while keyword and the loop condition.
+The loop body is executed at least once, regardless of whether the loop condition is true or false. After each iteration, the condition is checked, and if it evaluates to true, the loop continues; otherwise, the loop terminates.
+
+ex:
+int i = 0;
+do {
+    System.out.println(i);
+    i++;
+} while (i < 5);
+
+9) Write a program to print numbers from 1 to 10:
+- 
+public class Main {
+    public static void main(String[] args) {
+        // Using a for loop to print numbers from 1 to 10
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+
