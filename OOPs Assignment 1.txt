@@ -1,0 +1,65 @@
+OOPs Assignment 1
+
+
+1) how can we create object in java:
+- In Java, we can create an object by-
+
+Declare a Class: Define a class that describes the attributes and behaviors of the object you want to create.
+
+Instantiate the Class: Use the new keyword followed by a call to the class constructor to create a new instance of the class.
+
+ex.public static void main(String[] args) {
+        // Creating an object of Car class
+        Car myCar = new Car("Toyota", "Corolla");
+       .
+       .
+       .
+
+    }
+
+2) why 'new' keyword is used in java?
+- In Java, the new keyword is primarily used to dynamically allocate memory for an object at runtime. When we use new, you are essentially creating a new instance of a class
+- Creating Objects: The most common use of new is to create instances of classes. When we declare a variable of a class type and assign it using new, memory is allocated for the object, and the constructor of the class is called to initialize the object.
+
+
+- ex. MyClass obj = new MyClass(); // Creates a new instance of MyClass
+
+
+3)what are different variables in java?
+- Based on the behaviour and position of declaration all variables are divided into the following 3 types.
+
+Instance variables 
+
+Static variables 
+
+Local variables
+
+4) what is the difference between instance variables and local variables?
+- 
+instance variables-->
+belong to objects of a class and have a longer lifetime compared to local variables, which are temporary and exist only within a specific scope. Instance variables are accessible throughout the class
+-They can have access modifiers such as public, private, or protected, which control their visibility and accessibility from other classes.
+- Memory is allocated for instance variables when an object of the class is created using the new keyword.
+-They are automatically initialized with default values if not explicitly initialized. The default values depend on the variable's data type.
+
+Local variables -->
+- while local variables are accessible only within the block, method, or constructor in which they are declared.
+- They cannot have access modifiers.
+- Memory is allocated for local variables when the method, constructor, or block in which they are declared is executed
+-They must be explicitly initialized before they are used. They do not have default values and will result in a compilation error if accessed without initialization.
+
+
+5)In which area memory is allocated for local and instance variables?
+- Local variables are stored on the stack and have a short lifespan, existing only within the scope of the method, constructor, or block in which they are declared.
+-Instance variables are stored on the heap and have a longer lifespan, existing as long as the object they belong to exists
+
+6)What is method overloading in java?
+- Method overloading enables several methods to use the same name but have distinct signatures, where the signature might vary based on the quantity, nature, or combination of input arguments.
+
+- But in java we can take multiple methods with the same name and different 
+argument types. 
+abs(int) for int datatype
+abs(long) for long datatype
+abs(float) for float datatype
+
+
