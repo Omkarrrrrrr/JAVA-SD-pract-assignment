@@ -1,0 +1,117 @@
+Arrays Assignment 1
+
+1) What is an  array?
+- It refers to index collection of fixed number of homogeneous data elements.
+-Single variable holding multiple values which improves readability of the
+program.
+
+2)How to create an array?
+- 
+In Java, we can create both 1-dimensional and 2-dimensional arrays using the following syntax:
+
+**1-Dimensional Array**:
+
+To create a 1-dimensional array in Java, we specify the data type of the array elements followed by square brackets [], then the array name, and finally, you allocate memory for the array using the new keyword along with the size of the array.
+
+Here's an example of creating a 1-dimensional array of integers:
+
+// Declare and initialize a 1-dimensional array of integers
+int[] numbers = new int[5];                            // Creates an array of size 5
+You can also initialize the array with values:
+
+
+// Declare and initialize a 1-dimensional array of integers with values
+int[] numbers = {1, 2, 3, 4, 5};                       // Creates an array and initializes it with values
+
+
+**2-Dimensional Array**:
+
+To create a 2-dimensional array in Java, we specify the data type of the array elements followed by two sets of square brackets [][], then the array name, and finally, you allocate memory for the array using the new keyword along with the size of each dimension.
+
+Here's an example of creating a 2-dimensional array of integers:
+
+// Declare and initialize a 2-dimensional array of integers
+int[][] matrix = new int[3][3];                        // Creates a 3x3 matrix
+You can also initialize the 2-dimensional array with values:
+
+e
+// Declare and initialize a 2-dimensional array of integers with values
+int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};    // Creates a 3x3 matrix and initializes it with values
+
+Here, matrix is a 2-dimensional array with 3 rows and 3 columns. You can access elements using indices like matrix[rowIndex][columnIndex].
+
+
+
+3)Can we change the size of an array at runtime?
+- In Java, once an array is created, its size cannot be changed dynamically. The size of an array is fixed upon initialization and cannot be altered during runtime.
+
+4)Can you declare an array without assigning the size of an array?
+- In Java, we can declare an array without assigning its size, but we need to specify the data type and the square brackets []. This creates a reference to an array, but it doesn't allocate memory for the array itself
+- // Declare and assign size to the array in a single line
+int[] numbers = new int[5]; // Creates an array of size 5
+
+// Declare and assign size to the array in a single line
+String[] names = new String[10]; // Creates an array of size 10
+
+5)What is default value of array?
+-
+In Java, the default values of array elements depend on the data type of the array. When you create an array but do not explicitly assign values to its elements, Java automatically initializes the array with default values.
+
+Here are the default values for different data types:
+
+Numeric Types (byte, short, int, long, float, double):
+
+Default value: 0
+Boolean Type (boolean):
+
+Default value: false
+Character Type (char):
+
+Default value: '\u0000' (null character)
+Object Types (including arrays):
+
+Default value: null
+
+6)what is 1D array with example?
+- A one-dimensional (1D) array in Java is a linear collection of elements of the same data type, arranged in a single row. we can think of it as a sequence of elements indexed by a single index.
+-ex.
+public class Main {
+    public static void main(String[] args) {
+        // Declare and initialize a 1D array of integers
+        int[] numbers = new int[5]; // Creates an array of size 5
+        
+        // Assign values to elements
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+        
+        // Access and print elements of the array using a simple for loop
+        System.out.println("Elements of the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+    }
+}
+
+7) Write a program on 2d array?
+- public class Main {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array of integers
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        }; // Creates a 3x3 matrix
+        
+        // Access and print elements of the 2D array
+        System.out.println("Elements of the 2D array:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(); // Move to the next line after printing each row
+        }
+    }
+}
