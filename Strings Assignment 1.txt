@@ -1,0 +1,75 @@
+Strings Assignment 1
+
+1) what is Strings in java?
+-String it refers to an Object in java present in package called java.lang.String
+
+-String refers to collection of characters
+
+-In Java String object is by default immutable,meaning once the object is created
+we cannot change the value of the object, if we try to change then those changes
+will be reflected on the new object not on the existing object.
+
+2) Types of String in java?
+- 1)Mutable String
+Once if we create a String, on that String if we try to perform any operation and
+if those changes get reflected in the same object then such strings are called
+“Mutable String”.
+Example: StringBuffer, StringBuilder
+
+
+- 2)Immutable String
+Once if we create a String, on that String if we try to perform any operation
+then those changes won’t be reflected in the same object, rather a new object
+will be created.Such type of String is called as “Immutable String”.
+
+Example: String
+
+3)In how many ways you can create string objects in java?
+- in following ways we can create string objects in java:
+String s =new String()
+Creates an Empty String Object
+
+String s =new String(String literals)
+Creates an Object with String literals on Heap
+
+String s =new String(StringBuffer sb)
+Creates an equivalent String object for StringBuffer
+
+String s =new String(char[] ch)
+Creates an equivalent String object for character array
+
+String s =new String(byte[] b)
+Creates an equivalent String object for byte array
+
+
+4)What is a string constant pool in java?
+- The string constant pool in Java is a special area in the Java heap memory where unique string literals are stored. In Java, when we create a string using string literals (e.g., "hello"), the JVM checks if the string already exists in the string constant pool. If it does, then the reference to the existing string is returned. If not, a new string object is created and added to the pool.
+
+String constants are unique within the pool, meaning that if you have multiple string literals with the same value, they will share the same memory location in the pool. This is possible because strings in Java are immutable, so it's safe to reuse the same instance.
+
+However, string objects created using the new keyword (e.g., new String("hello")) are not stored in the string constant pool. They are created in the regular heap memory, even if their value matches a string in the constant pool.
+
+5)What do you mean by mutable and immutable objects?
+1)---> Mutable Objects:
+
+Mutable objects are objects whose state can be modified after they are created.
+This means that you can change the values of their properties or fields, add or remove elements, and so on.
+Examples of mutable objects in Java include StringBuilder,StringBuffer, ArrayList, and HashMap.
+Mutable objects can lead to unexpected behavior in concurrent or multi-threaded environments if proper synchronization is not applied.
+
+2)--->Immutable Objects:
+
+Immutable objects are objects whose state cannot be modified after they are created.
+Once an immutable object is created, its state remains constant for the lifetime of the object.
+This means that you cannot change the values of their properties or fields once they are set.
+Examples of immutable objects in Java include String, Integer, Double, and LocalDate.
+Immutable objects are inherently thread-safe, as their state cannot be changed once created, which makes them suitable for concurrent programming.
+
+
+6) Where exactly is the String constant pool is located in memory?
+- Heap Memory: The heap memory is where objects are allocated. It is shared among all threads of the Java application.
+
+The String constant pool is a special area within the heap memory where unique string literals are stored.
+
+Other objects, including arrays and instances of classes, are also allocated in the heap memory.
+-
