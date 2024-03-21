@@ -1,0 +1,73 @@
+Arrays Assignment 2
+
+1) what is the default value of array for different datatypes in java?
+- 
+In Java, the default values for arrays depend on the data type of the array elements:
+
+For numeric types (byte, short, int, long, float, double), the default value is 0.
+For the boolean type, the default value is false.
+For the char type, the default value is '\u0000' (which represents the null character).
+For object references (arrays of objects), the default value is null.
+
+
+2)can we pass the negative number in array size in java?
+- 
+In Java, the size of an array must be a non-negative integer. If we attempt to pass negative number as the size of an array, it will result in a compilation error
+
+3)Where does array stored in JVM memory?
+-
+In the Java Virtual Machine (JVM) memory, arrays are stored in the heap memory area. The heap memory is where all dynamically allocated objects reside, including arrays
+-When you create an array in Java using the new keyword, memory is allocated from the heap to store the elements of the array. The array itself is an object, and its elements are stored in contiguous memory locations.
+
+4)What are the disadvantages of arrays?
+- once we create the size cannot be increased/decreased.
+itstores only homogeneous data elements.
+
+5)What is anonymous array in java?
+- An array without a name is called Anonymous Array.
+
+This type of array is created just for instance use.
+
+
+Example:
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        // Creating an anonymous array of integers
+        int[] numbers = new int[] {1, 2, 3, 4, 5};
+
+        // Printing the elements of the anonymous array
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element " + i + ": " + numbers[i]);
+        }
+    }
+}
+
+6) what are different ways to traverse an array in java?
+-1) Using a for loop: This is the most common and straightforward way to traverse an array. You can use a traditional for loop to iterate over the array indices.
+
+2)Using an enhanced for loop (for-each loop): This loop simplifies the code for iterating over arrays and collections. It automatically iterates over each element in the array.
+
+3)Using Arrays.asList() with foreach loop: If you're working with arrays of objects, you can convert the array to a List using Arrays.asList() and then use a foreach loop to traverse it.
+
+
+7) what is the difference between length and length() method in java with example?
+length: This is a property of arrays in Java, used to determine the number of elements in an array. It is a final variable, so it is accessed directly without parentheses.
+
+length(): This is a method used to get the number of characters in a string. It is a method of the String class.
+
+example - public class LengthExample {
+    public static void main(String[] args) {
+        // Example of using length with an array
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println("Length of array: " + numbers.length);
+
+        // Example of using length() with a String
+        String str = "PWjava"
+        System.out.println("Length of string: " + str.length());
+    }
+}
+
+
+here length of array = 5
+     length of string = 6
+
