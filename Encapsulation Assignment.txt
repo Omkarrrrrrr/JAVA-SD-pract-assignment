@@ -1,0 +1,171 @@
+Encapsulation Assignment
+
+1) what is encapsulation in java , why is it called data hiding?
+- ● Binding of data and corresponding methods into a single unit is called
+"Encapsulation".
+
+● If any java class follows data hiding and abstraction then such class is
+referred as "Encapsulated class".
+
+Encapsulation = Data Hiding + Data Abstraction.
+-Encapsulation is often called "data hiding" because it hides the internal state of an object, preventing direct access to its data members from outside the class. This ensures that the object's data is accessed and modified only through controlled interfaces (i.e., getter and setter methods), allowing for better control over data integrity and security. Thus, encapsulation effectively hides the implementation details of an object's data, revealing only the necessary information to the outside world.
+
+2)What are important features of encapsulation?
+- 
+● Data Hiding: Encapsulation hides the internal state of an object by restricting access to its data members (variables) from outside the class. This prevents direct manipulation of the object's data, ensuring data integrity and security. Access to the data is provided only through controlled interfaces, such as getter and setter methods.
+
+● Abstraction: Encapsulation provides abstraction by exposing only the essential features of an object while hiding its implementation details. Users of an encapsulated class interact with it through its public interface, without needing to know about its internal workings. This simplifies the usage of objects and promotes code modularity and reusability.
+
+● Access Control: Encapsulation allows for fine-grained control over the access to an object's data. By declaring data members as private, access is restricted to the methods within the class, preventing external code from directly accessing or modifying the data. Getter and setter methods can be used to provide controlled access to the data while enforcing constraints or validation rules.
+
+● Modularity: Encapsulation promotes modular design by bundling related data and behavior into a single unit or class. This improves code organization, maintenance, and readability, as each class encapsulates a specific set of responsibilities and can be easily understood and modified without affecting other parts of the system.
+
+● Flexibility: Encapsulation enhances the flexibility of software systems by providing a layer of indirection between the internal representation of data and its external usage. This allows for changes to the internal implementation of a class without affecting its external interface, minimizing the impact on other parts of the system. Additionally, encapsulation enables the implementation of additional logic, error checking, or validation when accessing or modifying data, enhancing the robustness and reliability of the code.
+
+
+
+3) What are getters and setters method in java ? Explain with example
+- ●Setters
+
+Setter methods are used to set the value to the instance variables of the class.
+
+Syntax for setter method
+a. compulsory the method name should start with set.
+b. it should be public.
+c. return type should be void.
+d. compulsorily it should have some argument.
+
+- ●Getters
+
+Getter methods are used to get the value from the instance variables of the class.
+
+Syntax for getter method
+a. compulsory the method name should start with get.
+b. it should be public.
+c. return type should not be void.
+d. compulsorily it should not have any argument.
+
+
+example -
+ public class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Person person = new Person();
+        person.setName("John");
+        person.setAge(30);
+
+
+        String name = person.getName();
+        System.out.println("Name: " + name);
+
+
+        int age = person.getAge();
+        System.out.println("Age: " + age);
+    }
+}
+
+
+4) What is use of 'this' keyword explain with example
+- The this keyword in Java refers to the current instance of the class in which it appears. It can be used to access instance variables and methods of the class, as well as to invoke constructors of the same class.
+- example - 
+public class MyClass {
+    private int number;
+
+    public MyClass(int number) {
+        // Using 'this' keyword to refer to the instance variable
+        // and distinguish it from the parameter with the same name
+        this.number = number;
+    }
+
+    public void setNumber(int number) {
+        // Using 'this' to refer to the instance variable
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return this.number;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+       
+        MyClass obj = new MyClass(10);
+        obj.setNumber(20);
+        System.out.println("Number: " + obj.getNumber());
+    }
+}
+
+5) What are the advantages of encapsulation?
+- ● We can achieve security.
+
+● Enhancement becomes easy.
+
+● Maintainability and modularisation becomes easy.
+
+● It provides flexibility to the user to use the system very easily.
+
+6)How to achieve encapsulation in java? give example
+- Encapsulation in Java is achieved by declaring the instance variables of a class as private and providing public getter and setter methods to access and modify these variables, respectively. Here's an example demonstrating encapsulation:
+- Example
+public class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        
+        if (age >= 0 && age <= 150) { // Assuming valid age range
+            this.age = age;
+        } else {
+            System.out.println("Invalid age!");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.setName("John");
+        person.setAge(30);
+
+        
+        String name = person.getName();
+        System.out.println("Name: " + name);
+
+        int age = person.getAge();
+        System.out.println("Age: " + age);
+    }
+}
