@@ -60,16 +60,15 @@ In Java, the default values of array elements depend on the data type of the arr
 Here are the default values for different data types:
 
 Numeric Types (byte, short, int, long, float, double):
-
 Default value: 0
+
 Boolean Type (boolean):
-
 Default value: false
+
 Character Type (char):
-
 Default value: '\u0000' (null character)
-Object Types (including arrays):
 
+Object Types (including arrays):
 Default value: null
 
 6)what is 1D array with example?
