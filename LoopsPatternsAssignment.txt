@@ -1,0 +1,228 @@
+Q1) wap to print alphabets A,B,C,D,E,F,G,H using pattern programming logic
+
+- public class AlphabetPatterns {
+    public static void main(String[] args) {
+        System.out.println("Pattern for A:");
+        printA();
+        
+        System.out.println("\nPattern for B:");
+        printB();
+        
+        System.out.println("\nPattern for C:");
+        printC();
+        
+        System.out.println("\nPattern for D:");
+        printD();
+        
+        System.out.println("\nPattern for E:");
+        printE();
+        
+        System.out.println("\nPattern for F:");
+        printF();
+        
+        System.out.println("\nPattern for G:");
+        printG();
+        
+        System.out.println("\nPattern for H:");
+        printH();
+    }
+    
+    // Method to print pattern for A
+    public static void printA() {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = n - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k == 1 || k == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for B
+    public static void printB() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+            for (int j = 0; j < n; j++) {
+                if ((i == 0 || i == n / 2 || i == n - 1) && j < n - 1) {
+                    System.out.print("*");
+                } else if (j == n - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for C
+    public static void printC() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+            if (i == 0 || i == n - 1) {
+                for (int j = 0; j < n - 1; j++) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for D
+    public static void printD() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+            for (int j = 0; j < n; j++) {
+                if ((i == 0 || i == n - 1) && j < n - 1) {
+                    System.out.print("*");
+                } else if (j == n - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for E
+    public static void printE() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+            if (i == 0 || i == n / 2 || i == n - 1) {
+                for (int j = 0; j < n - 1; j++) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for F
+    public static void printF() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+            if (i == 0 || i == n / 2) {
+                for (int j = 0; j < n - 1; j++) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for G
+    public static void printG() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            if (i == 0 || i == n - 1) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print("*");
+                }
+            } else if (i == n / 2 || (i > n / 2 && i < n - 1)) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                for (int j = 0; j < n - 1; j++) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    // Method to print pattern for H
+    public static void printH() {
+        int n = 7;
+        for (int i = 0; i < n; i++) {
+            if (i == n / 2) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print("*");
+                }
+            } else {
+                System.out.print("*");
+                for (int j = 0; j < n - 1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+2) wap to print a triangle using star pattern program logic
+
+- public class TrianglePatterns {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the triangle
+        
+        // Outer loop for number of rows
+        for (int i = 1; i <= rows; i++) {
+            // Inner loop for printing spaces before stars
+            for (int j = rows - i; j >= 1; j--) {
+                System.out.print(" ");
+            }
+            // Inner loop for printing stars in each row
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+
+3)  print given pattern
+
+- public class PrintPattern {
+    public static void main(String[] args) {
+        int rows = 13; // Number of rows for the pattern
+
+        // Outer loop for number of rows
+        for (int i = 1; i <= rows; i++) {
+            // Left part of the pattern (left-aligned stars)
+            if (i <= rows / 2 + 1) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                // Spaces between the two parts of the pattern
+                for (int k = 1; k <= rows - 2 * i; k++) {
+                    System.out.print(" ");
+                }
+            } else {
+                // Right part of the pattern (right-aligned stars)
+                for (int j = 1; j <= rows - i + 1; j++) {
+                    System.out.print("*");
+                }
+                // Spaces between the two parts of the pattern
+                for (int k = 1; k <= 2 * i - rows - 1; k++) {
+                    System.out.print(" ");
+                }
+            }
+            
+            // Right part of the pattern (right-aligned stars)
+            for (int l = 1; l <= rows - i + 1; l++) {
+                System.out.print("*");
+            }
+            
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+
+
