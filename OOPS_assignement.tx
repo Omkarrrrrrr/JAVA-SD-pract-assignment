@@ -1,0 +1,264 @@
+1. What is Inheritance in Java?
+Ans: The technique of creating a new class by using an existing class functionality is called inheritance in Java.
+In other words, inheritance is a process where a child class acquires all the properties and behaviours of the
+parent class.
+
+
+2. What is superclass and subclass??
+Ans: A class from where a subclass inherits features is called superclass. It is also called base class or parent
+class.
+A class that inherits all the members (fields, method, and nested classes) from another class is called a
+subclass. It is also called a derived class, child class, or extended class.
+
+3. How is Inheritance implemented/achieved in Java?
+Ans: Inheritance can be implemented or achieved by using two keywords:
+extends: extends is a keyword that is used for developing the inheritance between two classes and two
+interfaces.
+implements: implements keyword is used for developing the inheritance between a class and interface.
+
+
+4. What is polymorphism?
+Ans: Polymorphism in OOP is the ability of an entity to take several forms. In other words, it refers to the ability of
+an object (or a reference to an object) to take different forms of objects. It allows a common data-gathering
+message to be sent to each class. Polymorphism encourages what is called ‘extendibility’ which means an
+object or a class can have its uses extended.
+
+5. Differentiate between method overloading and method overriding.
+- Method Overloading:
+Definition: Method overloading is a feature that allows a class to have more than one method having the same name, if their parameter lists are different (number of parameters or types of parameters).
+
+Purpose: To improve code readability and to reuse the same method name for methods that perform similar tasks but with different types or numbers of parameters.
+
+Example:
+
+
+class Calculator {
+    // Method to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        int sum1 = calc.add(10, 20);           // Calls add(int, int)
+        int sum2 = calc.add(10, 20, 30);       // Calls add(int, int, int)
+
+        System.out.println("Sum1: " + sum1);
+        System.out.println("Sum2: " + sum2);
+    }
+}
+Key Points:
+Method overloading is determined at compile-time.
+The methods must have the same name but different parameter lists (number or types of parameters).
+Return type can be different, but it alone is not sufficient to distinguish overloaded methods.
+Method Overriding:
+Definition: Method overriding occurs when a subclass provides a specific implementation of a method that is already provided by its superclass. The method signatures (name, parameters, return type) must be the same.
+
+Purpose: To provide specific implementations of inherited methods to suit the subclass's requirements, allowing for polymorphic behavior.
+
+Example:
+
+
+// Superclass
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Subclass Dog overriding sound() method
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); // Reference of Animal type, object of Dog
+
+        myDog.sound(); // Calls Dog's sound method at runtime
+    }
+}
+Key Points:
+Method overriding is determined at runtime (dynamic polymorphism).
+Inheritance relationship is required (subclass extends superclass).
+The overridden method must have the same name, parameters, and return type as the method in the superclass.
+The subclass method can provide a more specific implementation or behavior compared to the superclass method.
+
+
+6. What is an abstraction explained with an Example?
+Ans: Abstraction is nothing but the quality of dealing with ideas rather than events. It basically deals with hiding
+the internal details and showing the essential things to the user.
+Abstract class Sports { // abstract class sports
+Abstract void jump(); // abstract method
+}
+
+
+
+
+7. What is the difference between an abstract method and final method in Java?Explain with an example
+Ans: The abstract method is incomplete while the final method is regarded as complete. The only way to use
+an abstract method is by overriding it, but you cannot override a final method in Java.
+
+8. What is the final class in Java?
+Ans: A class declared with the final keyword is known as the final class. A final class can’t be inherited by
+subclasses. By using the final class, we can restrict the inheritance of the class. We can create a class as a final
+class only if it is complete in nature, which means it must not be an abstract class. In java, all the wrapper
+classes are final classes like String, Integer, etc.
+If we try to inherit a final class, then the compiler throws an error at compilation time. We can’t create a class as
+immutable without the final class.
+final class ParentClass
+{
+void showData()
+{
+System.out.println("This is a method of final Parent class");
+}
+}
+//It will throw compilation error
+class ChildClass extends ParentClass
+{
+void showData()
+{
+System.out.println("This is a method of Child class");
+}
+}
+class MainClass
+{
+public static void main(String arg[])
+{
+ParentClass obj = new ChildClass();
+obj.showData();
+}
+}
+
+9. Differentiate between abstraction and encapsulation.
+- Definition: Abstraction focuses on hiding the implementation details of a class or an object and showing only the necessary features of the object. It emphasizes what an object does rather than how it does it.
+
+Purpose: To provide a simplified view of the object's behavior, focusing on the essential characteristics while hiding unnecessary details. This simplification helps in managing complexity and allows for easier maintenance and modification of code.
+
+Usage: Achieved in Java using abstract classes and interfaces. Abstract classes can have abstract methods (without implementation) that must be overridden by subclasses. Interfaces can declare method signatures that must be implemented by classes.
+
+Example:
+// Example of abstraction using interface
+public interface Shape {
+    void draw();  // Abstract method
+}
+
+// Example of abstraction using abstract class
+public abstract class Animal {
+    abstract void sound();  // Abstract method
+    void eat() {
+        System.out.println("Animal is eating.");
+    }
+}
+
+
+Encapsulation:
+
+Definition: Encapsulation is the bundling of data (attributes) and methods (functions that operate on the data) into a single unit (class). It allows for controlling the access to the class members by using access modifiers (public, private, protected).
+
+Purpose: To achieve data hiding and ensure that the internal state of an object is accessible only through the methods provided by its class. Encapsulation enhances security and prevents accidental modification of data.
+
+Usage: Achieved by declaring the class variables as private and providing public getter and setter methods to access and modify these variables. It promotes data integrity and provides a well-defined interface for interacting with the object.
+
+Example:
+
+public class Car {
+    private String model;  // Encapsulated attribute
+    private int year;      // Encapsulated attribute
+
+    // Getter method
+    public String getModel() {
+        return model;
+    }
+
+    // Setter method
+    public void setModel(String model) {
+        this.model = model;
+    }
+}
+
+10. Difference between Runtime and compile time polymorphism explain with an example
+- Runtime Polymorphism (Dynamic Polymorphism):
+Definition: Runtime polymorphism occurs when the method to be executed is decided at runtime based on the object's type. It is achieved through method overriding.
+
+Example:
+
+// Superclass
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Subclass Dog extending Animal
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Subclass Cat extending Animal
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); // Reference of Animal type, object of Dog
+        Animal myCat = new Cat(); // Reference of Animal type, object of Cat
+
+        myDog.sound(); // Calls Dog's sound method
+        myCat.sound(); // Calls Cat's sound method
+    }
+}
+Explanation:
+
+In the example, Animal is a superclass with a method sound().
+Dog and Cat are subclasses that override the sound() method.
+At runtime, the JVM determines which version of sound() (from Dog or Cat) to execute based on the actual object type (Dog or Cat) referred to by myDog or myCat.
+Compile-time Polymorphism (Static Polymorphism):
+Definition: Compile-time polymorphism occurs when the method to be executed is determined at compile-time. It is achieved through method overloading and operator overloading.
+
+Example:
+
+
+class Calculator {
+    // Method to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        int sum1 = calc.add(10, 20);           // Calls add(int, int)
+        int sum2 = calc.add(10, 20, 30);       // Calls add(int, int, int)
+
+        System.out.println("Sum1: " + sum1);
+        System.out.println("Sum2: " + sum2);
+    }
+}
+Explanation:
+
+In the example, Calculator class has two methods named add(), but with different parameter lists (method overloading).
+At compile-time, Java determines which add() method to call based on the number and types of arguments passed.
+The method resolution is static and determined by the compiler based on the method signature.
