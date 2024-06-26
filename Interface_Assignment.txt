@@ -1,0 +1,82 @@
+1) what is an interface in java
+- An interface in Java is a mechanism that is used to achieve complete abstraction. It is basically a kind of
+class that contains only constants and abstract methods.
+
+2)Which modifiers are allowed for methods in an Interface?Explain with an example
+- Only abstract and public modifiers are allowed for methods in interfaces.
+
+- 
+// Defining an interface with abstract method and public access-->>
+
+public interface Shape {
+    // Abstract method (implicitly abstract and public)
+    void draw();
+
+    // Default method (public by default)
+    default void display() {
+        System.out.println("Displaying shape.");
+    }
+}
+
+// Implementing classes
+class Circle implements Shape {
+    // Implementing the abstract method
+   
+    public void draw() {
+        System.out.println("Drawing circle.");
+    }
+}
+
+class Rectangle implements Shape {
+    // Implementing the abstract method
+   
+    public void draw() {
+        System.out.println("Drawing rectangle.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle();
+        Shape rectangle = new Rectangle();
+
+        circle.draw();      
+        circle.display();   
+
+        rectangle.draw();   
+        rectangle.display(); 
+    }
+}
+
+3) what is use of interface in java?
+- i) interface is used to acheive full abstraction
+  ii) Using interfaces is the best way to expose our project’s API to some other project.
+  iii) Programmers use interfaces to customise features of software differently for different objects.
+  iv) By using interface, we can achieve the functionality of multiple inheritance.
+
+  4) Difference between abstract class and interfaces in java
+  -
+               Abstract class           |          Interface
+    1)Abstract class have abstract and  | 1)Only have abstract methods and since java 8
+    non abstract methods                |   it can have default and static method also
+                                        |
+    2)doesnt support multiple inherit-  | 2) supports multiple inheritance
+    ance                                |
+                                        |
+    3) can have final,non-final,static  | 3) has only static and final variables
+    and non static variable             |
+                                        |
+    4) can provide implementation of    | 4) cant provide implementation of interfaces
+       interface                        |
+                                        |
+    5) abstract keyword is used to      | 5)interface keyword used to declare
+       abstract class                   |
+                                        |
+    6)can extend another java class and | 6)an interface can extend another java interface only
+      implement multiple java interfaces|   
+                                        |
+    7) an abstract class extended using | 7) interface can be implemented using keyword "implements"
+     keyword "extends"                  |
+                                        |
+    8) java abstract class can have     |8) members of java interface are public only
+       class private protected
