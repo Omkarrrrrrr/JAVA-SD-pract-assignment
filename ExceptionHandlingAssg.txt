@@ -1,0 +1,61 @@
+1) Explain diff types of errors  in java
+- Syntax Errors:
+  Syntax errors, also known as compilation errors, occur when the rules of the Java language are not followed. 
+  These errors prevent the compiler from translating the source code into executable code. Common syntax errors include missing semicolons, mismatched parentheses, incorrect keywords, etc.
+- Runtime errors/Logical errors:
+  Logical errors are the most subtle type of errors in Java. They occur when the program compiles and runs without throwing any exceptions, 
+  but it does not produce the expected output due to flaws in the algorithm or the program's logic.
+
+
+2)What is an exception in java
+- In Java, an exception is an event that disrupts the normal flow of a program's instructions during its execution. 
+  When an exceptional condition arises, such as an error or unexpected situation that prevents the program from continuing its normal execution, an exception object is created to represent this situation.
+
+3)How can you handle exceptions in java?Explain with example
+- exception handling can be performed using :
+  1)try: The try block is used to enclose the code that might throw exceptions—typically code where errors can occur due to various reasons such as user input, file operations, network communications, etc.
+  2)catch: The catch block immediately follows a try block and is used to handle specific types of exceptions that can be thrown within the try block.
+  3)finally : The finally block is optional and follows the catch block (if any). It is used to execute cleanup code or final statements, which should be executed regardless of whether an exception occurred or not.
+
+  example -
+  try {
+    int[] numbers = {1, 2, 3};
+    System.out.println(numbers[4]);  // Accessing index 4, which does not exist
+    } catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Exception caught: " + e);
+    } finally {
+    System.out.println("Cleanup or final statement executed.");
+}
+
+4)Why do we need exception handling inn javaa?
+- Exception handling in Java is necessary to ensure programs can gracefully recover from errors, maintain code readability by separating error-handling logic,
+  manage resources effectively, improve debugging capabilities, enhance user experience with informative error messages, and adhere to best practices for robust software development.
+
+5)what are differneces between exceptions and errors in java
+- 
+Cause: Exceptions are caused by the application's logic or external conditions within its control.
+    Errors are caused by severe issues typically outside the application's control, such as system failures or resource depletion.
+Handling:Exceptions are meant to be caught and handled within the application using try-catch blocks or propagated up the call stack using throws. 
+    Errors are usually not handled by application code and indicate critical problems that often lead to termination of the application.
+
+
+Examples: Examples of exceptions include NullPointerException, FileNotFoundException, etc.
+          Examples of errors include OutOfMemoryError, StackOverflowError, VirtualMachineError, etc.
+
+6)Name the different types of exceptions in java
+-1)checked - Checked exceptions are exceptions that the compiler requires you to handle explicitly. 
+This means that if a method may throw a checked exception, the caller of that method must either handle the exception using a try-catch block or declare it in the throws clause of the method signature.
+-2)unchecked - Checked exceptions are subclasses of Exception (excluding subclasses of RuntimeException and Error). 
+They are typically used to indicate anticipated and recoverable conditions that the programmer should be aware of and handle appropriately.
+
+7)can we just use 'try' instead of  finally and catch blocks?
+- No, in Java, using only try without catch or finally blocks is not sufficient for comprehensive exception handling.
+- try-catch Blocks:
+
+The try-catch block is used to catch and handle exceptions that may occur within the try block. 
+It allows you to specify how to handle specific types of exceptions, ensuring that your program can recover from errors gracefully.
+
+-try-finally Blocks:
+
+The finally block is used for cleanup actions that should be performed regardless of whether an exception occurred or not. 
+It ensures that resources are properly released or final actions are executed, even if an exception is thrown and caught or not caught.
