@@ -1,0 +1,136 @@
+1. What do you mean by Multithreading? Why is it important?
+- Multithreading refers to the concurrent execution of multiple threads within the same process. A thread is the smallest unit of processing that can be executed by an operating system, 
+  and multithreading allows multiple threads to exist within the context of a single process. Each thread runs independently but shares the same memory space and resources.
+  
+importance: 
+Improved Performance
+Responsiveness
+Resource Utilization
+Modularity and Simplified Design
+Concurrency
+
+2.What are the benefits of using Multithreading?
+-Continuous Program Execution: Allows programs to run continuously even if a part of it is blocked.
+
+Improved Performance: Enhances performance compared to traditional parallel programs using multiple processes.
+
+Effective CPU Utilization: Enables writing efficient programs that utilize maximum CPU time.
+
+Enhanced Responsiveness: Improves responsiveness of complex applications or programs.
+
+Resource Efficiency: Increases use of CPU resources and reduces maintenance costs.
+
+Time Savings: Saves time by parallelizing tasks.
+
+Fault Isolation: If an exception occurs in one thread, it does not affect other threads due to their independent nature.
+
+Lower Resource Overhead: Requires fewer resources than executing multiple processes simultaneously.
+
+
+3.What is Thread in Java?
+Definition: A thread in Java is an independent path of execution within a program. It allows concurrent execution of tasks.
+
+Java Thread Class: Threads in Java are represented by instances of the java.lang.Thread class or by implementing the java.lang.Runnable interface.
+
+Concurrency: Java threads allow multiple tasks to run concurrently within the same program. They share the same memory space and resources of the process they belong to.
+
+Creation: Threads can be created by extending the Thread class and overriding its run() method or by implementing the Runnable interface and passing it to a Thread object.
+
+Lifecycle: Threads in Java have a lifecycle comprising states such as New, Runnable, Blocked, Waiting, Timed Waiting, and Terminated. Methods like start(), sleep(), wait(), notify(), and join() are used to manage thread execution and synchronization.
+
+Concurrency Utilities: Java provides higher-level concurrency utilities in the java.util.concurrent package, such as Executors, Callable, Future, etc., which simplify thread management and synchronization tasks.
+
+
+4.What are the two ways of implementing thread in Java?
+- 1)Extending the Thread Class:
+
+Define a new class that extends the Thread class.
+Override the run() method within this class to specify the code that will run concurrently.
+Create an instance of this subclass and call its start() method to begin execution of the thread.
+
+- 2)Implementing the Runnable Interface:
+Define a class that implements the Runnable interface, which requires implementing the run() method.
+Create an instance of Thread, passing the Runnable object as a parameter to its constructor.
+Call the start() method on the Thread object to begin execution of the thread
+
+5. What's the difference between thread and process?
+-A thread is the smallest unit of execution within a process. 
+Multiple threads within the same process share the process's resources, including memory, file handles, and other system resources. 
+Threads are lightweight compared to processes because they share the same memory space and can communicate directly through shared variables.
+This shared memory allows threads to synchronize their activities and share data efficiently using synchronization mechanisms like locks, semaphores, and monitors. 
+Threads within a process can execute concurrently, meaning they can perform multiple tasks simultaneously, which enhances the responsiveness and efficiency of applications. However, because threads share resources,
+they must be carefully synchronized to avoid conflicts and race conditions, where multiple threads access shared data simultaneously.
+
+On the other hand, a process is a complete, independent unit of execution that runs in its own isolated memory space.
+Each process has its own copy of the program code, data, and system resources, making it more heavyweight compared to threads. 
+Processes are isolated from each other, meaning they do not share memory or resources directly. 
+Communication between processes typically involves inter-process communication (IPC) mechanisms such as pipes, sockets, shared memory segments, or message queues. 
+Processes provide strong isolation and security since they cannot directly access each other's memory. However, creating and managing processes incurs more overhead compared to threads due to the need for separate memory allocation and resource management.
+
+
+6.How can we create daemon threads in java?
+- In Java, daemon threads are threads that run in the background and provide services to non-daemon threads. 
+  They are typically used for tasks that are not critical to the application's operation and can be terminated when all non-daemon threads have completed
+
+  - example showing how they are created and implemented
+  -// DaemonThread.java
+class DaemonThread extends Thread {
+    public void run() {
+        while (true) {
+            System.out.println("Daemon Thread is running");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        DaemonThread daemonThread = new DaemonThread();
+        daemonThread.setDaemon(true); // Set as daemon thread
+        daemonThread.start(); // Start the thread
+
+        // Main thread
+        System.out.println("Main thread exiting...");
+    }
+}
+
+
+7. what are wait() and sleep() Methods-
+- wait():
+
+The wait() method is defined in the Object class in Java and is used for thread synchronization within the context of inter-thread communication.
+When a thread calls wait() on an object, it temporarily releases the lock (monitor) it holds on that object and enters a waiting state.
+It is typically used in conjunction with notify() or notifyAll() methods to implement the producer-consumer pattern or other forms of thread communication where one thread waits for a condition to be met by another thread.
+
+Example:
+synchronized (sharedObject) {
+    while (!condition) {
+        try {
+            sharedObject.wait(); // Release lock and wait
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    // Perform action after condition is met
+}
+wait() must be called within a synchronized context (i.e., synchronized block or method) to avoid IllegalMonitorStateException
+
+- sleep():
+The sleep() method is defined in the Thread class and is used to pause the execution of the current thread for a specified period of time.
+Unlike wait(), sleep() does not release the lock it holds on the object or monitor.
+It is typically used for pausing or delaying execution in scenarios such as timed operations, periodic tasks, or simulations.
+
+Example:
+try {
+    Thread.sleep(1000); // Sleep for 1 second
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+sleep() can be called from any context without synchronization but may throw an InterruptedException if another thread interrupts the sleeping thread.
+
+
