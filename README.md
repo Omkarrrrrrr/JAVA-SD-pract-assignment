@@ -7,11 +7,7 @@ Welcome to the Core Java Practice Repository! This repository is designed for an
 1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
 3. [Topics Covered](#topics-covered)
-4. [Directory Structure](#directory-structure)
-5. [How to Use](#how-to-use)
-6. [Contributing](#contributing)
-7. [Resources](#resources)
-8. [License](#license)
+
 
 ## Introduction
 
