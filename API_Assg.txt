@@ -1,0 +1,125 @@
+1. program to display current date and time in java.
+- import java.time.*;
+public class DateTime {
+public static void main(String[] args) {
+LocalDate date = LocalDate.now();
+System.out.println(date);
+LocalTime time=LocalTime.now();
+System.out.println(time);
+}
+}
+
+2. Write a program to convert a date to a string in the format "MM/dd/yyyy".
+-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+public class DateToString {
+public static void main(String[] args) {
+LocalDate date = LocalDate.of(2024, 7, 14);
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+String formattedDate = date.format(formatter);
+System.out.println("Formatted Date: " + formattedDate);
+}
+}
+
+
+3. What is the difference between collections and streams?Explain with an Example
+- Collections
+Nature: Collections are in-memory data structures that store and manage a group of objects. Examples include List, Set, Map, etc.
+
+Modifiability: Collections are mutable. You can add, remove, and modify elements in a collection.
+
+Traversal: You typically traverse collections using iterators or enhanced for-loops.
+
+Performance: Collections are optimized for efficient data storage and retrieval, but operations on collections can be slower when processing large amounts of data.
+
+API: Collections belong to the java.util package and offer various methods to manipulate data, such as add(), remove(), contains(), etc.
+
+Use Case: Collections are best suited for scenarios where you need to store, retrieve, and modify data.
+
+Streams
+Nature: Streams are a sequence of elements that support sequential and parallel aggregate operations. They are not a data structure but a view over a data source.
+
+Immutability: Streams are immutable. Once created, you cannot change the elements of a stream. Instead, you perform operations that produce a new stream.
+
+Traversal: Streams are typically traversed using functional programming constructs like lambda expressions and method references.
+
+Performance: Streams are optimized for bulk operations and can leverage parallel processing, making them more efficient for processing large datasets.
+
+API: Streams belong to the java.util.stream package and offer methods like filter(), map(), reduce(), collect(), etc., which support declarative processing.
+
+Use Case: Streams are best suited for scenarios where you need to process data in a functional style, often in a pipeline of operations, such as filtering, mapping, and reducing.
+
+Example of collections------>>>>>
+import java.io.*;
+import java.util.*;
+class Main {
+public static void main(String[] args)
+{
+List<String> CompanyList = new ArrayList<>();
+CompanyList.add("Google");
+CompanyList.add("Apple");
+CompanyList.add("Microsoft");
+Comparator<String> com = (String o1, String o2) -> o1.compareTo(o2);
+Collections.sort(CompanyList, com);
+for (String name : CompanyList) {
+System.out.println(name);
+}
+}
+}
+
+
+
+
+
+
+Example of streams----------->>>
+import java.io.*;
+import java.util.*;
+class Demo {
+public static void main(String[] args)
+{
+List<String> CompanyList = new ArrayList<>();
+CompanyList.add("Google");
+CompanyList.add("Apple");
+CompanyList.add("Microsoft");
+CompanyList.stream().sorted().forEach(
+System.out::println);
+}
+}
+
+
+4. What is enums in java? explain with an example
+-We can use enum to define a group of named constants.
+Enums are used to represent a collection of related constants that have a common purpose. Each constant in an
+enum is an instance of the enum type, and they are typically defined as public static final fields.
+Here's an example of how to define an enum in Java:
+
+class EnumDemo{
+public enum DayOfWeek {
+MONDAY,
+TUESDAY,
+WEDNESDAY,
+THURSDAY,
+FRIDAY,
+SATURDAY,
+SUNDAY
+}
+public static void main(String args[]){
+for(DayOfWeek d:DayOfWeek.values())
+System.out.println(d);
+}
+}
+
+5. What are in built annotations in java
+-built-in annotations in Java:
+@Override
+@Deprecated
+@SuppressWarnings
+@FunctionalInterface
+@Retention
+@Target
+@Documented
+@Inherited
+These built-in annotations in Java are used to provide additional information to the Java compiler and other
+tools. They help improve code readability, maintainability, and safety by enforcing specific rules and behaviours
+in Java code.
