@@ -5,7 +5,8 @@ Computer basics Assignment
 binary form, in accordance with commands from a variable programme.
 
 2)What is RAM?
--RAM stands for Random Access Memory. It is a type of computer memory that is used to store data and machine code that is currently being used or processed by the CPU. RAM is volatile, meaning that it loses its contents when the power is turned off. RAM is used by the CPU to store data that needs to be accessed quickly, such as running programs and open files.
+-RAM stands for Random Access Memory. It is a type of computer memory that is used to store data and machine code that is currently being used or processed by the CPU. 
+RAM is volatile, meaning that it loses its contents when the power is turned off. RAM is used by the CPU to store data that needs to be accessed quickly, such as running programs and open files.
 
 3)Where is data stored in a computer?
 -In a computer, data is stored in various types of storage devices.
@@ -21,7 +22,7 @@ Output devices are used to present data from a computer to the user.
 monitor,printer,plotter,speakers.
 
 
-6)Which is thw input device that allows a user to move cursor on pointer on the screen?
+6)Which is the input device that allows a user to move cursor on pointer on the screen?
 -mouse
 
 7)Which language is directly understood by the computer without a transition program?
